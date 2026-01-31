@@ -1,0 +1,424 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shoots by Ghadeer</title>
+
+    <!-- Fonts (classy like the example) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="nphotographercs.css" />
+    <script src="nscriptphotograph.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a class="logo" href="#home">Shoots by Ghadeer</a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav__links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#services">Our Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#agreement">Agreement</a>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO -->
+    <main id="home" class="hero">
+        <div class="hero__inner">
+            <section class="hero__left">
+
+                <div class="portrait">
+                    <img src="ghadeer.jpeg" alt="Ghadeer holding a camera">
+                </div>
+            </section>
+
+            <section class="hero__right">
+                <h1>I’M <span class="gold">Ghadeer</span></h1>
+                <p class="hero__text">
+                    and I capture moments & feelings — soft glances, warm light, and forever memories.
+                    <br /><br />
+                    Your story, through my heart and lens.
+                </p>
+
+                <button class="btn btn--gold" id="openBookingBtn">
+                    <span class="btn__icon">✈</span>
+                    Book a session
+                </button>
+            </section>
+        </div>
+    </main>
+    <!-- Booking Popup -->
+    <div class="popup" id="bookingPopup" aria-hidden="true">
+        <div class="popup__content">
+            <button class="popup__close" id="closeBookingBtn" aria-label="Close">×</button>
+
+            <h2>Book a session</h2>
+
+            <form id="bookingForm">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+                <input type="text" name="phone" placeholder="Phone" required />
+
+                <select name="service" required>
+                    <option value="">Choose service</option>
+                    <option>Wedding</option>
+                    <option>Engagement</option>
+                    <option>Portrait</option>
+                </select>
+
+                <input type="date" name="event_date" required />
+                <textarea name="message" placeholder="Message" rows="3"></textarea>
+
+                <button type="submit" class="btn btn--gold">Send</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="section__inner">
+            <h2 class="title">About</h2>
+            <p class="muted">
+                I’m Ghadeer — Photography & Videography. Reel Visionary 📸
+                I love capturing real emotions with a classy white & gold aesthetic.
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section section--brown">
+        <div class="section__inner">
+            <h2 class="title center">Our <span class="gold">Services</span></h2>
+
+            <div class="services">
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-ring"></i>
+                        </div>
+                    </div>
+                    <h3>Wedding Sessions</h3>
+                </article>
+
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                    </div>
+                    <h3>Engagement</h3>
+                </article>
+
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                    <h3>Individual Portraits</h3>
+                </article>
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-film"></i>
+                        </div>
+                    </div>
+                    <h3>Reels / Videography</h3>
+                </article>
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                    </div>
+                    <h3>Ads & Brands</h3>
+                </article>
+                <article class="service">
+                    <div class="service__icon">
+                        <div class="iconBadge">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                    </div>
+                    <h3>Events</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+        <div class="section__inner">
+            <div class="galleryHead">
+                <h2 class="title">Media <span class="gold">Gallery</span></h2>
+                <a class="viewAll" href="#gallery">View All</a>
+            </div>
+
+            <div class="gallery">
+                <!-- Replace with your photos -->
+                <button class="gItem" data-full="kkk.jpg" aria-label="Open image 1">
+                    <img src="kkk.jpg" alt="Gallery photo 1">
+                </button>
+                <button class="gItem" data-full="mommdadd.jfif" aria-label="Open image 2">
+                    <img src="mommdadd.jfif" alt="Gallery photo 2">
+                </button>
+                <button class="gItem" data-full="children.jfif" aria-label="Open image 3">
+                    <img src="children.jfif" alt="Gallery photo 3">
+                </button>
+                <button class="gItem" data-full="leah.jfif" aria-label="Open image 4">
+                    <img src="leah.jfif" alt="Gallery photo 4">
+                </button>
+                <button class="gItem" data-full="ff.jfif" aria-label="Open image 5">
+                    <img src="ff.jfif" alt="Gallery photo 5">
+                </button>
+                <button class="gItem" data-full="sea.jfif" aria-label="Open image 6">
+                    <img src="sea.jfif" alt="Gallery photo 6">
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="caritas" class="section experience">
+        <div class="section__inner">
+
+            <h2 class="title">Caritas <span class="gold">Experience</span></h2>
+
+            <p class="expText">
+                I joined Caritas to capture real moments of kindness and community. This experience helped me grow as a photographer,
+                focus on storytelling, and document emotions with respect and purpose.
+            </p>
+
+            <section class="caritas">
+                <div class="caritas__wrap">
+
+                    <!-- LEFT -->
+                    <div class="caritas__videoBox">
+                        <video class="caritas__video" controls playsinline webkit-playsinline>
+                            <source src="caritasvd.mp4" type="video/mp4">
+                        </video>
+                        <p class="caritas__caption">Behind the scenes — Caritas capturing moments.</p>
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="caritas__textBox">
+                        <h3>What I learned</h3>
+                        <ul>
+                            <li>Capturing emotion and authentic moments</li>
+                            <li>Working respectfully in real-life environments</li>
+                            <li>Improving my timing, framing, and editing workflow</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+    </section>
+
+    <section id="editing-power" class="section editingPower">
+        <div class="section__inner">
+
+            <h2 class="title">
+                The Power of <span class="gold">Editing</span>
+            </h2>
+
+            <p class="editingDesc">
+                See how professional editing transforms an image from raw to refined.
+            </p>
+
+            <div class="editingCompare">
+
+                <!-- BEFORE -->
+                <div class="editItem">
+                    <span class="editLabel">Before</span>
+                    <img src="beforeedit.jfif" alt="Before editing">
+                </div>
+
+                <!-- AFTER -->
+                <div class="editItem">
+                    <span class="editLabel">After</span>
+                    <img src="afteredit.jfif" alt="After editing">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="pricing" class="section pricing">
+        <div class="section__inner">
+
+            <h2 class="title">
+                Packages & <span class="gold">Pricing</span>
+            </h2>
+
+            <p class="pricingDesc">
+                Choose the package that fits your needs. All prices are in USD.
+            </p>
+
+            <div class="pricingGrid">
+
+                <!-- BASIC PACKAGE -->
+                <div class="priceCard">
+                    <h3>Basic Package</h3>
+                    <p class="price">$150</p>
+
+                    <ul>
+                        <li>30 minutes session</li>
+                        <li>10 edited photos</li>
+                        <li>1 location</li>
+                        <li>Delivery within 3–5 days</li>
+                    </ul>
+                </div>
+
+                <!-- STANDARD PACKAGE -->
+                <div class="priceCard">
+                    <h3>Standard Package</h3>
+                    <p class="price">$300</p>
+
+                    <ul>
+                        <li>60 minutes session</li>
+                        <li>25 edited photos</li>
+                        <li>2 outfit changes</li>
+                        <li>Delivery within 3–5 days</li>
+                    </ul>
+                </div>
+
+                <!-- PREMIUM PACKAGE -->
+                <div class="priceCard">
+                    <h3>Premium Package</h3>
+                    <p class="price">$450</p>
+
+                    <ul>
+                        <li>90 minutes session</li>
+                        <li>40 edited photos</li>
+                        <li>2 locations</li>
+                        <li>Delivery within 2–4 days</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- AGREEMENT -->
+    <section id="agreement" class="section section--brown">
+        <div class="section__inner">
+            <h2 class="title">Agreement</h2>
+            <ul class="list">
+                <li>Booking is confirmed after I contact you.</li>
+                <li>Please arrive 10 minutes early.</li>
+                <li>Edited delivery time: 3–7 days (change as you like).</li>
+                <li>For ads & collaborations: DM / Email.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <p>© <span id="year"></span> Shoots by Ghadeer. All rights reserved.</p>
+            <div class="social">
+                <a href="https://instagram.com/shoots_by_ghadeer" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+        <img id="lbImg" alt="Expanded photo">
+    </div>
+
+    <!-- BOOKING MODAL (like last photo) -->
+    <div class="bookingModal" id="bookingModal" aria-hidden="true">
+        <div class="bookingCard" role="dialog" aria-modal="true" aria-label="Book your session">
+            <div class="bookingTop">
+                <div>
+                    <div class="bookingTitle">Book your session</div>
+                    <div class="bookingSub" id="bookingSelectedText">Select a date & time</div>
+                </div>
+                <button class="bookingClose" id="closeBookingBtn" aria-label="Close booking">×</button>
+            </div>
+
+            <div class="bookingGrid">
+                <!-- Calendar -->
+                <section class="cal">
+                    <div class="cal__head">
+                        <button class="cal__nav" id="prevMonthBtn" aria-label="Previous month">‹</button>
+                        <div class="cal__month" id="monthLabel">Month</div>
+                        <button class="cal__nav" id="nextMonthBtn" aria-label="Next month">›</button>
+                    </div>
+
+                    <div class="cal__dow">
+                        <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                    </div>
+
+                    <div class="cal__grid" id="calGrid"></div>
+                </section>
+
+                <!-- Time + details -->
+                <section class="slots">
+                    <div class="slots__head">
+                        <div class="slots__date" id="slotsDateLabel">Choose a date</div>
+                        <div class="slots__meta">
+                            <span class="tag">Duration: <b>2 hours</b></span>
+                            <span class="tag">Timezone: <b>Local</b></span>
+                        </div>
+                    </div>
+
+                    <div class="slotList" id="slotList"></div>
+
+                    <form class="miniForm" id="bookingForm">
+                        <div class="row">
+                            <label>
+                                Name
+                                <input required name="name" placeholder="Your name">
+                            </label>
+                            <label>
+                                Phone
+                                <input required name="phone" placeholder="+964 ...">
+                            </label>
+                        </div>
+                        <label>
+                            Notes
+                            <textarea name="notes" rows="3" placeholder="Location, session type, inspiration..."></textarea>
+                        </label>
+
+                        <input type="hidden" name="date" id="hiddenDate">
+                        <input type="hidden" name="time" id="hiddenTime">
+
+                        <button class="btn btn--gold full" type="submit">Confirm Request</button>
+                        <p class="hint">Saved locally for training (no backend).</p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
